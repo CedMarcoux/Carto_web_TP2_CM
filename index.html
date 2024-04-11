@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <!--  Carte leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <script src="geojson/Failles_et_autres.js"></script>
+     <script src="geojson/PB2002_plates.js"></script>
+         <!-- Plugins -->
+    <link rel="stylesheet" href="plugins/legend/leaflet.legend.css">
+    <script src="plugins/legend/leaflet.legend.js"></script>
+        <!-- clusters  -->
+    
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://www.cegeplimoilou.ca/">
+                <img src="Images/Logo_Cegep.png" alt="Logo Cégep" class="logo">
+            </a>
+            <ul>
+                <li><a href="#acceuil">Haut de la page</a></li>
+                <li><a href="#item11">Carte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid-container" id="acceuil">
+        <div class="item1">Les séismes du monde</div>
+        <div class="item2 titresection" >
+            <a href="#item6">Mais quesqu'un séisme?</a>
+        </div>
+        <div class="item3 titresection">
+            <a href="#item8">Vidéo sur les séismes</a>
+        </div>
+        <div class="item4 titresection">
+            <a href="#item9">Échelle de richter</a>
+        </div>
+        <div class="item5 titresection">
+            <a href="#item11">Carte des séismes dans le monde</a>
+        </div>  
+        <div id="item6" class="item9"><h1>Mais quesqu'un séisme?</h1>
+            <p>Un séisme ou tremblement de terre est une secousse du sol résultant de la libération brusque d'énergie accumulée par les contraintes exercées sur les roches. Cette libération d'énergie se fait par rupture le long d'une faille, généralement préexistante. Plus rares sont les séismes dus à l'activité volcanique ou d'origine artificielle (explosions par exemple). Le lieu de la rupture des roches en profondeur se nomme le foyer ; la projection du foyer à la surface est l'épicentre du séisme. Le mouvement des roches près du foyer engendre des vibrations élastiques qui se propagent, sous la forme de paquets d'ondes sismiques, autour et au travers du globe terrestre. Il produit aussi un dégagement de chaleur par frottement, au point de parfois fondre les roches le long de la faille (pseudotachylites).</p>
+        </div>
+        <div class="item7">
+            <a href="https://fr.wikipedia.org/wiki/S%C3%A9isme">
+            <img src="images/Séisme-Épicentre-Hypocentre-Faille_tectonique.jpg" alt=""></a>
+            <p class="lien">Selon wikipedia</p>
+            <a href="https://www.seismescanada.rncan.gc.ca/index-fr.php">
+                <img src="images/eqcan_intro.jpg" alt=""></a>
+            <p class="lien">Selon Séismes Canada</p>
+        </div>
+        <div id="item8" class="item8"><h1>Séisme au Japon</h1>
+            <video width="700px" height="500px" controls>
+                <source src="video/Earthquake in Japan-360p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+        </div>
+        <div class="item9" id="item9"><h1>L'échelle de Richter</h1>
+        <img src="images/Richterjpg.jpg" alt="">
+        </div>
+        <div class="item10"><p class="pad">Historiquement, l'échelle de Richter a été l'une des premières tentatives d'évaluer numériquement l'intensité des tremblements de terre, grâce à la magnitude de Richter qui mesure l'énergie sismique radiée (énergie des ondes sismiques) lors du séisme. Imprécise et dépassée, elle a depuis été remplacée par des échelles plus précises permettant de mesurer la magnitude des séismes.</p>
+        <br>
+        <br>
+        <p>L'éponyme1,2 de l’échelle de Richter3 est le sismologue américain Charles Francis Richter (1900-1985)1,2,4 qui l'a proposée en 19354. Jusqu'alors c'était essentiellement l'échelle de Mercalli qui était utilisée pour évaluer la force d'un séisme, mais cette échelle, basée sur les dégâts observés (notamment sur les bâtiments), est notoirement imprécise. Richter élabore une définition mathématique plus rigoureuse, établissant une équation logarithmique à partir de l'amplitude des enregistrements d'un sismographe (de type Wood-Anderson (en)).</p>
+        <br>
+        <br>
+        <p class="lien">Source: wikipedia</p>
+        </div>
+        <div class="item11" id="item11"><h2>Tous les tremblements de Terre de plus de 2.5 de magnitudes dans le monde dans les 7 derniers jours</h2>
+            <div id="map">
+                <script src="script.js"></script>
+            </div>
+    <footer id="pied">
+        <p class="bottom-right footer">Réalisé par : Cédrick Marcoux </p>
+        <p class="bottom-left footer">
+            <a href="https://www.usgs.gov/">©U.S Geological Survey</a>
+        </p>
+    </footer>
+
+</body>
+</html>
